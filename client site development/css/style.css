@@ -1,0 +1,268 @@
+/* menu */
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  padding-top: 70px; /* for fixed header */
+}
+
+/* Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #222;
+  color: #fff;
+  padding: 15px 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #e91e63;
+}
+
+/* Hero Section */
+.hero {
+  background: url('https://offloadmedia.feverup.com/secretldn.com/wp-content/uploads/2017/05/18124223/tt-liquor-cellar-cocktail-bar-shoreditch-east-london-homepage-01-1.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 150px 20px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background: #e91e63;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: #c2185b;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+section.dark {
+  background: #333;
+  color: #fff;
+}
+
+/* Menu List */
+.menu-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.menu-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+  margin: auto;
+}
+
+.menu-item img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.menu-info {
+  padding: 10px;
+  text-align: center;
+}
+
+.menu-info h3 {
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+
+.menu-info p {
+  font-size: 0.85em;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.price {
+  font-weight: bold;
+  background: #eee;
+  padding: 6px;
+  display: inline-block;
+  border-radius: 4px;
+  color: #c0392b;
+  font-size: 0.9em;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
+/* Booking Form */
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+form input,
+form button {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  font-family: inherit;
+}
+
+form button {
+  background: #e91e63;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #c2185b;
+}
+
+/* Contact Section */
+#contact p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: white;
+  margin-top: 50px;
+}
+
+/* Cookie Consent */
+#cookieConsent {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: #444;
+  color: #fff;
+  padding: 15px;
+  border-radius: 6px;
+  display: none;
+  z-index: 2000;
+  font-size: 14px;
+  max-width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#cookieConsent button {
+  margin-left: 10px;
+  padding: 8px 12px;
+  background: #e91e63;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+#cookieConsent button:hover {
+  background: #c2185b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+  }
+
+  .hero-content p {
+    font-size: 18px;
+  }
+
+  .menu-list {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  .menu-item {
+    max-width: 100%;
+  }
+
+  form {
+    width: 90%;
+    padding: 20px;
+  }
+}
