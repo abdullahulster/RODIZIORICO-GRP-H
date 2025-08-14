@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rodiziorico - Menu</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header>
+  <div class="logo">Rodiziorico</div>
+  <nav>
+   <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="About.html">about</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section id="menu" class="dark" style="padding-top: 100px;">
+  <h2>Our Menu</h2>
+  <div class="menu-list">
+    <div class="menu-item">
+      <img src="https://ik.imagekit.io/bhug69xts/mango-mojito.png" alt="Mojito" />
+      <div class="menu-info">
+        <h3>Mojito</h3>
+        <p>Refreshing cocktail with mint, lime, sugar, and rum.</p>
+      </div>
+      <div class="price">£8</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://i.pinimg.com/736x/95/d5/bf/95d5bf642689c6b7872fa930b5b2db22.jpg" alt="Old Fashioned" />
+      <div class="menu-info">
+        <h3>Old Fashioned</h3>
+        <p>Classic mix of bourbon, sugar, bitters, and orange peel.</p>
+      </div>
+      <div class="price">£10</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.cocktailwave.com/margarita.png" alt="Margarita" />
+      <div class="menu-info">
+        <h3>Margarita</h3>
+        <p>Tequila, lime juice, and triple sec served over ice.</p>
+      </div>
+      <div class="price">£9</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://static.standard.co.uk/s3fs-public/thumbnails/image/2016/09/30/10/cocktails.jpg" alt="Martini" />
+      <div class="menu-info">
+        <h3>Martini</h3>
+        <p>Gin and dry vermouth, garnished with an olive or lemon twist.</p>
+      </div>
+      <div class="price">£11</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://images.cocktailwave.com/mango-pina-colada.png" alt="Pina Colada" />
+      <div class="menu-info">
+        <h3>Pina Colada</h3>
+        <p>Rum, coconut cream, and pineapple juice served blended or on the rocks.</p>
+      </div>
+      <div class="price">£9</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://www.micaelaskitchen.com/wp-content/uploads/2023/08/COCKTAIL-683x1024.png" alt="Negroni" />
+      <div class="menu-info">
+        <h3>Negroni</h3>
+        <p>Equal parts gin, vermouth, and Campari for a bold, bitter flavor.</p>
+      </div>
+      <div class="price">£10</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://spirits-navigator.com/wp-content/uploads/2020/03/bdf2fd92a54e27878511cd54036ef662.jpg" alt="Whiskey Sour" />
+      <div class="menu-info">
+        <h3>Whiskey Sour</h3>
+        <p>Bourbon, lemon juice, and sugar, shaken with ice for a tangy kick.</p>
+      </div>
+      <div class="price">£8</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://tse2.mm.bing.net/th/id/OIP.S0tBk14V02vnBw8ORr4FCwHaKX?pid=Api&P=0&h=180" alt="Cosmopolitan" />
+      <div class="menu-info">
+        <h3>Cosmopolitan</h3>
+        <p>Vodka, triple sec, cranberry juice, and lime for a fruity delight.</p>
+      </div>
+      <div class="price">£9</div>
+    </div>
+    <div class="menu-item">
+      <img src="https://alkoholy.de/wp-content/uploads/2023/05/bloody_mary_alkoholy.jpg" alt="Bloody Mary" />
+      <div class="menu-info">
+        <h3>Bloody Mary</h3>
+        <p>Vodka, tomato juice, and spices served over ice for a savory punch.</p>
+      </div>
+      <div class="price">£8</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Rodiziorico. All rights reserved.
+</footer>
+
+<div id="cookieConsent">
+  We use cookies to improve your experience on Rodiziorico.
+  <button id="acceptCookies">Accept</button>
+</div>
+
+<script>
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(this.getAttribute("href")).scrollIntoView({
+        behavior: "smooth",
+      });
+    });
+  });
+
+  // Cookie consent logic
+  if (!localStorage.getItem("cookiesAccepted")) {
+    document.getElementById("cookieConsent").style.display = "block";
+  }
+  document.getElementById("acceptCookies").addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookieConsent").style.display = "none";
+  });
+</script>
+
+</body>
+</html>

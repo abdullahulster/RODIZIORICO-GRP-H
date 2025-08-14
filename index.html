@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rodiziorico | Home</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Rodiziorico</div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="booking.html">Booking</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="About.html">about</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Welcome to Rodiziorico</h1>
+    <p>Where taste meets tradition</p>
+    <a href="menu.html" class="btn">Explore Menu</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Descreption</h2>
+  <p>Rodiziorico is your go-to destination for rich flavors, fine drinks, and an unforgettable atmosphere. Whether you’re here for cocktails, food, or music, we’ve got something special waiting for you.</p>
+</section>
+
+<footer>
+  &copy; 2025 Rodiziorico. All rights reserved.
+</footer>
+
+<div id="cookieConsent">
+  We use cookies to improve your experience on Rodiziorico.
+  <button id="acceptCookies">Accept</button>
+</div>
+
+<script>
+  if (!localStorage.getItem("cookiesAccepted")) {
+    document.getElementById("cookieConsent").style.display = "block";
+  }
+  document.getElementById("acceptCookies").addEventListener("click", function() {
+    localStorage.setItem("cookiesAccepted", "true");
+    document.getElementById("cookieConsent").style.display = "none";
+  });
+</script>
+
+</body>
+</html>
